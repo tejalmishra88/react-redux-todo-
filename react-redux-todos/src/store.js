@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux'; 
 
       import rootReducer from './reducers'; 
-      const middleware = [
+      const middlewares = [
 
       ] ;
       export default createStore(  
         rootReducer,  
         undefined,  
-        compose(  applyMiddleware(...middleware),  window.devToolsExtension ? window.devToolsExtension() : f => f  
+        compose(  applyMiddleware(...middlewares),  window.devToolsExtension ? window.devToolsExtension() : f => f  
                 )  
       );  
